@@ -7,13 +7,18 @@
         <title>Aaron Weiss Portfolio</title>
     </head>
     <style>
+        :root {
+            --primary-color: white; /* Define primary color variable */
+            --secondary-color: white1; /* Define secondary color variable */
+            --text-color: black; /* Define text color variable */
+        }
         body {
             font-family: Arial, sans-serif; /* Change font to Arial */
             text-align: center;
-
+            color: var(--text-color); /* Set text color for the body */
             margin: 0;
             padding: 0;
-            
+            background-color: var(--primary-color); /* Set background color for the body */
             
             /* padding: 0 20px;
             display: flex;
@@ -30,6 +35,10 @@
             max-width: 800px; /* Set maximum width for the container */
             margin: 0 auto; /* Center the container horizontally */
             padding: 0 20px; /* Add padding on both sides */
+            
+            background-color: var(--secondary-color); /* Set background color for the container */
+            border-radius: 5px; /* Add border radius to the container */
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1); /* shadow: off for now*/
         }
     </style>
     <body>
@@ -39,8 +48,11 @@
                 <p>
                     I don't know how to make a website, but I do have a masters degree in 
                     applied statistics from Eastern Michigan University.
-
-                    
+                </p>
+                <p>
+                    I currently work for Booz Allen Hamilton as a data scientist, where I have 
+                    worked on a project for NASA. Unfortunately, the nature of that project is 
+                    confidential, though it is not classified.
                 </p>
             </div>
         </div>
