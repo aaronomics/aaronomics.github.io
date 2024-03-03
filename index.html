@@ -9,23 +9,40 @@
     <style>
         body {
             font-family: Arial, sans-serif; /* Change font to Arial */
+            text-align: center;
+
+            margin: 0;
+            padding: 0;
+            
+            
+            /* padding: 0 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            margin: 0; */
         }
         .content {
-            text-align: center;
+            display: inline-block; /* Make the content block-level */
+            text-align: left; /* Reset text alignment */
+        }
+        .container {
+            max-width: 800px; /* Set maximum width for the container */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 0 20px; /* Add padding on both sides */
         }
     </style>
     <body>
-        <div class="content">
-            <h1>Hello, my name is Aaron</h1>
-            <p>
-                I don't know how to make a website, but I do have a masters degree in 
-                applied statistics from Eastern Michigan University.
-            </p>
+        <div class="container">
+            <div class="content">
+                <h1>Hello, my name is Aaron</h1>
+                <p>
+                    I don't know how to make a website, but I do have a masters degree in 
+                    applied statistics from Eastern Michigan University.
+
+                    
+                </p>
+            </div>
         </div>
     </body>
 </html>
