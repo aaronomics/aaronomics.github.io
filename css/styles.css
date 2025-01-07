@@ -151,3 +151,15 @@ a:focus {
     outline: 2px solid var(--color-highlight); /* Focus indicator */
     outline-offset: 4px;
 }
+
+ul {
+    list-style-type: lower-greek; /* Options: disc, circle, square, none */
+    list-style-position: outside;
+}
+
+img {
+    border: 2px solid #333; /* Add a border */
+    border-radius: 10px; /* Make edges rounded */
+    max-width: 40%; /* Ensure the image scales within its container */
+    height: auto; /* Maintain aspect ratio */
+}
