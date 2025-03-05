@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Resume</title>
+    <style>
+        :root {
+            --color-primary: #151E3F;
+            --color-secondary: #778DA9;
+            --color-accent: #E0E1DD;
+            --color-highlight: #B74F6F;
+            --color-neutral: #EB8258;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--color-accent);
+            background-color: var(--color-primary);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        nav {
+            width: 240px;
+            background-color: rgba(119, 141, 169, 0.9); /* Slightly transparent */
+            color: var(--color-accent);
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            height: calc(100% - 20px);
+            overflow-y: auto;
+            transform: translateX(-250px);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 15px; /* Rounded edges */
+            padding: 10px; /* Padding to make it look floating */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for floating effect */
+        }
+
+        nav.collapsed {
+            transform: translateX(0);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: min(4vw, 60px) min(3vw, 20px) max(20px, min(3vw, 20px)); /* Add padding at the top to avoid overlap */
+        }
+
+        nav ul li {
+            margin: 20px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--color-accent);
+            font-size: 1.2em;
+        }
+
+        .content {
+            padding: min(3vw, 20px);
+            max-width: 800px;
+            margin: auto; /* Center horizontally */
+            text-align: center;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            background-color: var(--color-highlight);
+            color: var(--color-primary);
+            border: none;
+            padding: min(2vw, 10px);
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1000;
+            transition: left 0.3s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                transform: translateX(-250px);
+            }
+
+            nav.collapsed {
+                transform: translateX(0);
+            }
+
+            .toggle-btn {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <button class="toggle-btn" id="toggle-btn">☰</button>
+
+    <div class="content" id="content">
+        <section id="home">
+            <h1>Welcome</h1>
+            <p>This is my digital resume. Explore the sections to know more about me!</p>
+        </section>
+        <!-- Additional sections for about, work, and education -->
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const navbar = document.getElementById('navbar');
+
+        toggleBtn.addEventListener('click', () => {
+            navbar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>
